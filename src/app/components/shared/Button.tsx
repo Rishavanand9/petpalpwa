@@ -4,6 +4,8 @@ interface ButtonProps {
   variant?: "primary" | "secondary";
   size?: number;
   onClick?: Function;
+  width?: string;
+  mT?: number;
 }
 
 const Button = styled.button<ButtonProps>`
@@ -14,7 +16,9 @@ const Button = styled.button<ButtonProps>`
   cursor: pointer;
   transition: all 0.2s ease;
   min-width: 140px;
+  width: ${(props) => props.width || "100%"};
   border-radius: ${({ theme }) => theme.borderRadius.button};
+  margin-top: ${(props) => props.mT ? `${props.mT}rem` : "0"};
 
   ${(props) =>
     props.variant === "primary"
