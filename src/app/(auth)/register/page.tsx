@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import Input from '@/app/components/shared/Input';
 import Button from '@/app/components/shared/Button';
 import AppLogo from '@/app/components/shared/AppLogo';
-import { ErrorText, Form, LinkSpan, RadioGroup, RadioOption, RegisterContainer, TermsContainer } from './styles';
+import { ErrorText, Form, LinkSpan, RadioGroup, RadioOption, AuthContainer, TermsContainer } from '@/app/(auth)/styles';
 import { TitleText } from '@/app/(main)/welcome/styles';
 import { REGISTER_TEXT } from '@/constants';
 import { validateEmailPhone, validatePassword } from '@/utils/validation';
@@ -71,7 +71,7 @@ export default function RegisterPage() {
     };
 
     return (
-        <RegisterContainer>
+        <AuthContainer>
             <AppLogo />
             <TitleText>{REGISTER_TEXT.TITLE}</TitleText>
 
@@ -152,6 +152,6 @@ export default function RegisterPage() {
                     {REGISTER_TEXT.CREATE_ACCOUNT}
                 </Button>
             </Form>
-        </RegisterContainer>
+        </AuthContainer>
     );
 }

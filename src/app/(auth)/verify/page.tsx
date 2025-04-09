@@ -5,7 +5,7 @@ import Input from '@/app/components/shared/Input';
 import Button from '@/app/components/shared/Button';
 import AppLogo from '@/app/components/shared/AppLogo';
 import { TitleText } from '@/app/(main)/welcome/styles';
-import { ErrorText, Form, VerifyContainer } from './styles';
+import { ErrorText, Form, AuthContainer } from '../styles';
 import UploadID from '@/app/components/shared/Upload';
 import TextArea from '@/app/components/shared/TextArea';
 
@@ -79,7 +79,7 @@ export default function VerifyPage() {
     };
 
     return (
-        <VerifyContainer>
+        <AuthContainer>
             <AppLogo />
             <TitleText>Verification</TitleText>
 
@@ -112,6 +112,6 @@ export default function VerifyPage() {
                     Verify Identity
                 </Button>
             </Form>
-        </VerifyContainer>
+        </AuthContainer>
     );
 }

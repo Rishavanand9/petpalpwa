@@ -21,4 +21,12 @@ const REGISTER_TEXT = {
     'CREATE_ACCOUNT': 'Create Account',
 }
 
-export { WELCOME_TEXT, REGISTER_TEXT };
+const LOGIN_TEXT = {
+    'TITLE': 'Login',
+    'EMAIL_PHONE': 'Email/Phone',
+    'PASSWORD': 'Password',
+    'FORGOT_PASSWORD': 'Forgot Password?',
+    'LOGIN': 'Log In',
+}
+
+export { WELCOME_TEXT, REGISTER_TEXT, LOGIN_TEXT };

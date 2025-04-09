@@ -2,15 +2,16 @@
 import AppLogo from "@/app/components/shared/AppLogo";
 import AppName from "@/app/components/shared/AppName";
 import Button from "@/app/components/shared/Button";
-import { ButtonContainer, GuestLink, LimitedText, WelcomeContainer, TitleText } from "./styles";
+import { ButtonContainer, GuestLink, LimitedText, TitleText } from "./styles";
 import { WELCOME_TEXT } from "@/constants";
 import { useRouter } from 'next/navigation';
+import { AuthContainer } from "@/app/(auth)/styles";
 
 export default function Welcome() {
     const router = useRouter();
 
     return (
-        <WelcomeContainer>
+        <AuthContainer>
 
             <TitleText>{WELCOME_TEXT.TITLE}</TitleText>
             <AppLogo />
@@ -35,6 +36,6 @@ export default function Welcome() {
 
                 </div>
             </ButtonContainer>
-        </WelcomeContainer>
+        </AuthContainer>
     );
 }

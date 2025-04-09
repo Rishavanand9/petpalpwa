@@ -2,17 +2,6 @@ import styled from "styled-components";
 import Link from "next/link";
 import { fadeIn } from "@/theme/globalStyles";
 
-const WelcomeContainer = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  gap: 16px;
-  animation: ${fadeIn} 1s ease-out;
-`;
-
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -43,4 +32,4 @@ const TitleText = styled.span`
   font-size: 20px;
 `;
 
-export { WelcomeContainer, ButtonContainer, GuestLink, LimitedText, TitleText };
+export { ButtonContainer, GuestLink, LimitedText, TitleText };
