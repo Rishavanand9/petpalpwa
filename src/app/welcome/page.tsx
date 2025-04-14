@@ -3,7 +3,7 @@ import AppLogo from "@/app/components/shared/AppLogo";
 import AppName from "@/app/components/shared/AppName";
 import Button from "@/app/components/shared/Button";
 import { ButtonContainer, GuestLink, LimitedText, TitleText } from "./styles";
-import { WELCOME_TEXT } from "@/constants";
+import { WELCOME_TEXT } from "@/constants/authConstants";
 import { useRouter } from 'next/navigation';
 import { AuthContainer } from "@/app/(auth)/styles";
 

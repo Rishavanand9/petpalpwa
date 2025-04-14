@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import Input from '@/app/components/shared/Input';
 import Button from '@/app/components/shared/Button';
 import AppLogo from '@/app/components/shared/AppLogo';
-import { TitleText } from '@/app/(main)/welcome/styles';
+import { TitleText } from '@/app/welcome/styles';
 import { ErrorText, Form, AuthContainer } from '../styles';
 import UploadID from '@/app/components/shared/Upload';
 import TextArea from '@/app/components/shared/TextArea';

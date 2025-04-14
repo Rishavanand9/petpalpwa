@@ -4,8 +4,8 @@ import { useRouter } from 'next/navigation';
 import Input from '@/app/components/shared/Input';
 import Button from '@/app/components/shared/Button';
 import AppLogo from '@/app/components/shared/AppLogo';
-import { TitleText } from '@/app/(main)/welcome/styles';
-import { LOGIN_TEXT } from '@/constants';
+import { TitleText } from '@/app/welcome/styles';
+import { LOGIN_TEXT } from '@/constants/authConstants';
 import { validateEmailPhone, validatePassword } from '@/utils/validation';
 import { ErrorText, Form, LinkSpan, AuthContainer } from '@/app/(auth)/styles';
 

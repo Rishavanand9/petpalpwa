@@ -5,8 +5,8 @@ import Input from '@/app/components/shared/Input';
 import Button from '@/app/components/shared/Button';
 import AppLogo from '@/app/components/shared/AppLogo';
 import { ErrorText, Form, LinkSpan, RadioGroup, RadioOption, AuthContainer, TermsContainer } from '@/app/(auth)/styles';
-import { TitleText } from '@/app/(main)/welcome/styles';
-import { REGISTER_TEXT } from '@/constants';
+import { TitleText } from '@/app/welcome/styles';
+import { REGISTER_TEXT } from '@/constants/authConstants';
 import { validateEmailPhone, validatePassword } from '@/utils/validation';
 
 interface FormData {

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Input from '@/app/components/shared/Input';
 import Button from '@/app/components/shared/Button';
 import AppLogo from '@/app/components/shared/AppLogo';
-import { TitleText } from '@/app/(main)/welcome/styles';
+import { TitleText } from '@/app/welcome/styles';
 import { ErrorText, Form, AuthContainer, ProfileSection, ProfileCircle, AddIcon, SliderContainer, ChipsContainer, ChipsGrid, Chip, ResidenceOptions, RadioGroup, RadioOption, AddPhoto } from '../styles';
 import TextArea from '@/app/components/shared/TextArea';
 import AddPets from '@/app/components/shared/AddPets';
