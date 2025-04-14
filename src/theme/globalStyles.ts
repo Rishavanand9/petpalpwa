@@ -1,5 +1,5 @@
 "use client";
-import { createGlobalStyle, keyframes } from 'styled-components';
+import { createGlobalStyle, keyframes, styled } from 'styled-components';
 import { Theme } from './theme';
 
 declare module 'styled-components' {
@@ -31,4 +31,10 @@ export const fadeIn = keyframes`
     opacity: 1.5;
     transform: translateY(0);
   }
+`;
+
+export const MainLayoutContainer = styled.div`
+  margin: 8px;
+  animation: ${fadeIn} 1s ease-in-out;
+  max-width: 100vw;
 `;

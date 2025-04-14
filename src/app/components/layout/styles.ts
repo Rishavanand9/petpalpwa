@@ -7,6 +7,7 @@ const FooterContainer = styled.footer`
   padding: 2rem 1rem;
   border-top: 1px solid #e5e7eb;
   text-align: center;
+  max-width: 100vw;
 
   @media (min-width: 768px) {
     text-align: left;
@@ -89,9 +90,15 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  padding: 12px 28px;
+  width: 90%;
+  min-height: 60px;
   background-color: white;
-  border-bottom: 1px solid ${(props) => props.theme.colors.secondary};
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 `;
 
 const LocationWrapper = styled.div`
