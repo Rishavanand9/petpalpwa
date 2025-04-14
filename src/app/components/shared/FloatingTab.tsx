@@ -42,7 +42,7 @@ const FloatingTabsContainer = styled.div`
 
 
 const StyledButton = styled.button<{
-    isActive: boolean;
+    isactive: string;
     variant: 'default' | 'primary' | 'success' | 'danger';
 }>`
   flex: 1;
@@ -55,20 +55,20 @@ const StyledButton = styled.button<{
   transition: all 0.2s ease;
   white-space: nowrap;
   
-  ${({ isActive, variant, theme }) => {
+  ${({ isactive, variant, theme }) => {
         // Default styling
-        let bgColor = isActive ? theme.colors.primary : theme.colors.gray[100];
-        let textColor = isActive ? theme.colors.background : theme.colors.text;
+        let bgColor = isactive === 'true' ? theme.colors.primary : theme.colors.gray[100];
+        let textColor = isactive === 'true' ? theme.colors.background : theme.colors.text;
 
         // Variant-specific styling
         if (variant === 'primary') {
-            bgColor = isActive ? theme.colors.primary : theme.colors.gray[100];
-            textColor = isActive ? theme.colors.background : theme.colors.text;
+            bgColor = isactive === 'true' ? theme.colors.primary : theme.colors.gray[100];
+            textColor = isactive === 'true' ? theme.colors.background : theme.colors.text;
         } else if (variant === 'success') {
-            bgColor = isActive ? '#86efac' : theme.colors.gray[100];
+            bgColor = isactive === 'true' ? '#86efac' : theme.colors.gray[100];
             textColor = '#166534';
         } else if (variant === 'danger') {
-            bgColor = isActive ? '#fca5a5' : theme.colors.gray[100];
+            bgColor = isactive === 'true' ? '#fca5a5' : theme.colors.gray[100];
             textColor = '#dc2626';
         }
 
@@ -76,7 +76,7 @@ const StyledButton = styled.button<{
       background-color: ${bgColor};
       color: ${textColor};
       &:hover {
-        background-color: ${isActive ? bgColor : theme.colors.gray[200]};
+        background-color: ${isactive === 'true' ? bgColor : theme.colors.gray[200]};
       }
     `;
     }}
@@ -122,7 +122,7 @@ const FloatingTabs: React.FC<FloatingTabsProps> = ({ buttons, activeButtonId }) 
                     <StyledButton
                         key={button.id}
                         data-id={button.id}
-                        isActive={activeButtonId === button.id}
+                        isactive={(activeButtonId === button.id).toString()}
                         variant={button.variant || 'default'}
                         onClick={(e) => button.onClick(e)}
                     >

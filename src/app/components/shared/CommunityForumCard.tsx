@@ -20,7 +20,7 @@ export interface CommunityForumCardProps {
 }
 
 // Styled Components
-const CardContainer = styled.div<{ cardType: 'event' | 'urgent' | 'general' }>`
+const CardContainer = styled.div<{ cardtype: 'event' | 'urgent' | 'general' }>`
   width: 300px;
   border-radius: 16px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -31,7 +31,7 @@ const CardContainer = styled.div<{ cardType: 'event' | 'urgent' | 'general' }>`
   min-height: 280px;
   
   ${props => {
-    switch (props.cardType) {
+    switch (props.cardtype) {
       case 'event':
         return `border-color: #4CAF50;`;
       case 'urgent':
@@ -42,7 +42,7 @@ const CardContainer = styled.div<{ cardType: 'event' | 'urgent' | 'general' }>`
   }}
 `;
 
-const CardHeader = styled.div<{ cardType: 'event' | 'urgent' | 'general' }>`
+const CardHeader = styled.div<{ cardtype: 'event' | 'urgent' | 'general' }>`
   padding: 12px 16px;
   display: flex;
   align-items: center;
@@ -69,10 +69,10 @@ const Username = styled.div`
   color: #424242;
 `;
 
-const ContentArea = styled.div<{ cardType: 'event' | 'urgent' | 'general' }>`
+const ContentArea = styled.div<{ cardtype: 'event' | 'urgent' | 'general' }>`
   padding: 16px;
   background-color: ${props => {
-    switch (props.cardType) {
+    switch (props.cardtype) {
       case 'event':
         return '#E8F5E9';
       case 'urgent':
@@ -133,13 +133,13 @@ const CommunityForumCard: React.FC<CommunityForumCardProps> = ({
   username
 }) => {
   return (
-    <CardContainer cardType={type}>
-      <CardHeader cardType={type}>
+    <CardContainer cardtype={type}>
+      <CardHeader cardtype={type}>
         <UserAvatar>{username.charAt(0).toUpperCase()}</UserAvatar>
         <Username>{username}</Username>
       </CardHeader>
       
-      <ContentArea cardType={type}>
+      <ContentArea cardtype={type}>
         <Title>{title}</Title>
         
         {details.location && (
