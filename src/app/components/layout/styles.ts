@@ -8,6 +8,7 @@ const FooterContainer = styled.footer`
   border-top: 1px solid #e5e7eb;
   text-align: center;
   max-width: 100vw;
+  margin-bottom: 5em;
 
   @media (min-width: 768px) {
     text-align: left;
@@ -104,7 +105,7 @@ const HeaderContainer = styled.header`
 const LocationWrapper = styled.div`
   display: flex;
   align-items: center;
-  background-color: #fef9c3;
+  background-color: ${({ theme }) => theme.colors.secondary};
   color: #374151;
   padding: 6px 14px;
   border-radius: 9999px;
@@ -139,7 +140,7 @@ const NotificationCount = styled.span`
 
 const ProfileIcon = styled(Icon)`
   font-size: 32px;
-  color: #60a5fa;
+  color: ${({ theme }) => theme.colors.primary};
 `;
 
 export { FooterContainer, FooterGrid, FooterCol, FooterBottom, SocialIcons, HeaderContainer, LocationWrapper, IconWrapper, NotificationWrapper, NotificationCount, ProfileIcon };

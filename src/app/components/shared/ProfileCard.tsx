@@ -23,7 +23,7 @@ const CardContainer = styled.div`
 `;
 
 const CardHeader = styled.div`
-  background-color: #fdf7d5;
+  background-color: ${({ theme }) => theme.colors.secondary};
   position: relative;
   height: 100px;
   display: flex;
@@ -97,7 +97,7 @@ const RatingRow = styled.div`
 
 const StarRating = styled.div`
   display: flex;
-  color: #ffc107;
+  color:rgb(216, 204, 39);
   margin-right: 4px;
 `;
 

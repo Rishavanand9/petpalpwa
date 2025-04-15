@@ -30,13 +30,13 @@ const StyledInput = styled.input`
   }
 `;
 
-const Input: React.FC<InputProps> = ({ label, id, ...props }) => {
+const Input: React.FC<InputProps> = ({ label, id, placeholder, ...props }) => {
   const inputId = id || label.replace(/\s+/g, '-').toLowerCase();
 
   return (
     <InputWrapper>
       <Label htmlFor={inputId}>{label}</Label>
-      <StyledInput id={inputId} {...props} />
+      <StyledInput id={inputId} placeholder={placeholder} {...props} />
     </InputWrapper>
   );
 };
